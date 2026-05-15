@@ -1,16 +1,11 @@
-lista=[]
-man=men=0
-for list in range(0,5):
-    lista.append( int(input(f"digite um numero nessa posicao {list}: ")))
-    if list==0:
-        man=men=lista[list]
-    else:
-        if lista[list] > man:
-            man=lista[list]
-        if lista[list]< men:
-            men=lista[list]
+l=[]
+while True:
+    l.append(int(input("digite um numero: ")))
+    op=str(input("quer continuar[S/N]: ")).upper().strip()
+    while op not in ["S","N"]:
+        print("digite apenas s ou n")
+        op = str(input("quer continuar[S/N]: ")).upper().strip()
+    if op== "N":
+        break
 
-print(lista)
-print(f"o maior numero:{man}")
-print(f"o menor numero: {men}")erth
-
+print(l)
